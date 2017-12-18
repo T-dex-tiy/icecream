@@ -1,0 +1,114 @@
+/*This is the main areas that we want to style.  * will hit all items on the page*/
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  background-color: lightblue;
+  padding: 0;
+  margin: 0;
+}
+/*Styling the top area*/
+nav {
+  /*How we tell the browser to position the text in the nav*/
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  border: 10px double hotpink;
+  border-radius: 10px;
+  /*This is a way that we tell the browser how we would like to align out items. Flexbox froggy will help explain this better as this is a large discussion. Feel free to contact us on any questions you have after going through that excersie.*/
+  display: flex;
+  justify-content: space-between;
+  /*Justify content is a flexbox key word. If flex is not defined on any of the items that you want the browser will look past this and not render it*/
+  font-size: 2em;
+}
+/*Defining the way that we want to align the main content of the page*/
+.thirds {
+  display: flex;
+}
+/*Style of the main logo*/
+.mainlogo {
+  margin-top: -50px;
+  margin-left: 2em;
+  /*z-index is how the browser stacks the items in the browser window. There is no top level so you can make this number and item that you want*/
+  z-index: 99;
+}
+/*Style of the smaller logo cone*/
+.cone {
+  align-items: flex-start;
+  border: 3px double black;
+  background-color: white;
+  border-radius: 99px;
+  height: 3em;
+  width: 3em;
+}
+/*Main body styles of individual items */
+
+.left {
+  /*This is how we tell the left side how big we want it*/
+  width: 27%;
+  /*We use percentages here to help with the different size screens on different devices*/
+  margin: 10px;
+}
+.center {
+  /*display: block;*/
+  margin: 0px auto;
+  width: 27%;
+  /*We use percentages here to help with the different size screens on different devices*/
+}
+.right {
+  width: 27%;
+  /*We use percentages here to help with the different size screens on different devices*/
+  padding-right: 5em;
+  /*Padding and margin all have the four directions that you can adjust individually. I added this on the right to push the items off of the side for better visuals*/
+}
+tr.odd {
+  /* Notice the second call. How this is set up the browser is looking at all of the <tr> that have a class of "odd" and changing accordingly
+  You can do this multiple times just as long as the language is set up correctly. Slack the insturtors if you do this and see issues*/
+  background-color: blue;
+}
+tr.even {
+  /* Notice the second call. How this is set up the browser is looking at all of the <tr> that have a class of "even" and changing accordingly*/
+  background-color: red;
+}
+
+/*Actions for user display changing when interacted with*/
+a:link {
+  /* This is a top level style. If the user has not clicked on or is interacting with the a tag, this is the sytle you will see*/
+  color: hotpink;
+}
+a:visited {
+  /*If the user has clicked on the link this is the sytle that will be shown to the user. This will not disappear until the user leaves the page or it has been refreshed*/
+  color: pink;
+}
+a:hover {
+  /*:hover is an action that changes when the mouse is over the item. It is good design to have the color change as it provides feedback to where the mouse is*/
+  background-color: black;
+  color: white;
+  font-style: italic;
+}
+a:focus {
+  /*:focus is an action that focuses in further than hover */
+  font-style: italic;
+}
+a:active {
+  /*:active is a css action that occurs when the user is interacting with the element*/
+  text-decoration: line-through;
+}
+
+tr:hover {
+  /*Example of :hover being used on different element. All of the calls above can be applied to any html elment design*/
+  background-color: white;
+}
+
+/*Last but not least footer css designs. This all should look familar from the examples that I used above*/
+footer {
+  text-align: center;
+  background-color: lightslategrey;
+  height: 3rem;
+}
+
+/*As stated all of these examples can be and should be looked into further. I personally use https://developer.mozilla.org/en-US/ for any items I need researching as their documentation is very detailed and regularly updated. Other places are https://www.w3schools.com/, which I do use but not as often.*/
